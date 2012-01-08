@@ -10,12 +10,13 @@ gem 'therubyracer'
 
 # Gems used only for assets and not required
 # in production environments by default.
+  gem 'dynamic_form'
 group :assets do
   gem 'sass-rails', "  ~> 3.1.0"
   gem 'coffee-rails', "~> 3.1.0"
-  gem 'dynamic_form'
   gem 'uglifier'
 end
+
 group :test, :development do
    gem 'rspec-rails', '~> 2.5'
    gem 'ruby-prof'
@@ -24,7 +25,7 @@ end
 group :test do
   gem 'minitest'
   gem 'ZenTest'
-  gem 'cucumber-rails'
+  gem 'cucumber-rails', '1.0.6'
   gem 'capybara'
   gem 'database_cleaner'
   gem 'factory_girl'
