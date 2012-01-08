@@ -3,12 +3,20 @@ Feature: Creating projects
   As a user
   I want to create them easily
 
-  Scenario: Creating a project
+  Background:
     Given I am on the homepage
     When I follow "New Project"
+
+
+
+  Scenario: Creating a project
     And I fill in "Name" with "GVim 2"
     And I press "Create Project"
     Then I should see "Project has been created."
     And I should be on the project page for "GVim 2"
     And I should see "GVim 2 - Projects - Ticketee"
 
+  Scenario: Creating a project without a name
+    And I press "Create Project"
+    Then I should see "Project has not been created."
+    And I should see "Name can't be blank"
