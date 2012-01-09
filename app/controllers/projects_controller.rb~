@@ -1,6 +1,6 @@
 class ProjectsController < ApplicationController
   before_filter :find_project, :only => [:show,:edit,:update,:destroy]
-  
+  has_many :tickets
 
   def index
     @projects = Project.all
